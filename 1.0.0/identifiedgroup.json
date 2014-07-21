@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#identifiedgroup",
+    "allOf": [{ "$ref": "#inversefunctional" }],
+    "properties": {
+        "name": {},
+        "objectType": {},
+        "member": {},
+        "mbox": {},
+        "mbox_sha1sum": {},
+        "account": {},
+        "openid": {}
+    },
+    "additionalProperties": false
+}

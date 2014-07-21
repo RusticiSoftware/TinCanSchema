@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#mbox_sha1sum",
+    "type": "object",
+    "required": ["mbox_sha1sum"],
+    "properties": {
+        "mbox_sha1sum": {
+            "type": "string"
+        }
+    },
+    "patternProperties": {
+        "^(mbox|account|openid)$": {
+            "type": "null"
+        }
+    }
+}

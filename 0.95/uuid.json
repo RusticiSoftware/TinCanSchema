@@ -1,0 +1,6 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#uuid",
+    "type": "string",
+    "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{8}"
+}

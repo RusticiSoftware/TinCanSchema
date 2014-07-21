@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#context",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "registration": { "format": "uuid" },
+        "instructor": {
+            "oneOf": [
+                { "$ref": "#agent" },
+                { "$ref": "#group" }
+            ]
+        },
+        "team": {
+            "oneOf": [
+                { "$ref": "#agent" },
+                { "$ref": "#group" }
+            ]
+        },
+        "contextActivities": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parent": { "$ref": "#activityList" },
+                "category": { "$ref": "#activityList" },
+                "grouping": { "$ref": "#activityList" },
+                "other": { "$ref": "#activityList" }
+            }
+        },
+        "revision": {
+            "type": "string"
+        },
+        "platform": {
+            "type": "string"
+        },
+        "language": {
+            "type": "string"
+        },
+        "statement": { "$ref": "#statementref" },
+        "extensions": { "$ref": "#extensions" }
+    }
+}

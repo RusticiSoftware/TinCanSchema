@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#anonymousgroup",
+    "required": ["member"],
+    "properties": {
+        "member": {},
+        "name": {},
+        "objectType": {}
+    },
+    "additionalProperties": false
+}

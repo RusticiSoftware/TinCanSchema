@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#statement_base",
+    "type": "object",
+    "required": ["actor", "verb", "object"],
+    "additionalProperties": false,
+    "properties": {
+        "objectType": {},
+        "id": { "format": "uuid" },
+        "actor": {
+            "oneOf": [
+                { "$ref": "#agent" },
+                { "$ref": "#group" }
+            ]
+        },
+        "verb": { "$ref": "#verb" },
+        "object": {
+            "oneOf": [
+                { "$ref": "#activity" },
+                { "$ref": "#objectagent" },
+                { "$ref": "#group" },
+                { "$ref": "#statementref" },
+                { "$ref": "#substatement" }
+            ]
+        },
+        "result": { "$ref": "#result" },
+        "context": { "$ref": "#context" },
+        "timestamp": { "format": "iso_date" },
+        "stored": { "format": "iso_date" },
+        "authority": {
+            "oneOf": [
+                { "$ref": "#agent" },
+                {
+                    "allOf": [{ "$ref": "#anonymousgroup" }],
+                    "properties": {
+                        "member": {
+                            "type": "array",
+                            "minItems": 2,
+                            "maxItems": 2
+                        }
+                    }
+                }
+            ]
+        },
+        "attachments": {
+            "type": "array",
+            "items": {"$ref": "#attachment"}
+        },
+        "voided": {
+            "type": "boolean"
+        },
+        "version": { "$ref": "#version" }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#duration",
+    "type": "string",
+    "pattern": "^P(?=\\w*\\d)(?:\\d+Y|Y)?(?:\\d+M|M)?(?:\\d+W|W)?(?:\\d+D|D)?(?:T(?:\\d+H|H)?(?:\\d+M|M)?(?:\\d+(?:\\­.\\d{1,2})?S|S)?)?$"
+}

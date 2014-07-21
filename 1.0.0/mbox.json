@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#mbox",
+    "type": "object",
+    "required": ["mbox"],
+    "properties": {
+        "mbox": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^mailto:[^@]+@[^@]+$"
+        }
+    },
+    "patternProperties": {
+        "^(mbox_sha1sum|account|openid)$": {
+            "type": "null"
+        }
+    }
+}

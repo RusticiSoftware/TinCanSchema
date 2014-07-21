@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#groupBasics",
+    "type": "object",
+    "required": ["objectType"],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "objectType": {
+            "enum": ["Group"]
+        },
+        "member": {
+            "type": "array",
+            "items": { "$ref": "#agent" }
+        }
+    }
+}

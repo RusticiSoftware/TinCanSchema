@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#account",
+    "type": "object",
+    "required": ["account"],
+    "properties": {
+        "account": {
+            "type": "object",
+            "required": [
+                "homePage",
+                "name"
+            ],
+            "properties": {
+                "homePage": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "patternProperties": {
+        "^(mbox_sha1sum|mbox|openid)$": {
+            "type": "null"
+        }
+    }
+}

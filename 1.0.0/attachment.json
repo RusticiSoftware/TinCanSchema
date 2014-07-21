@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#attachment",
+    "type": "object",
+    "required": [
+        "usageType",
+        "display",
+        "contentType",
+        "length",
+        "sha2"
+    ],
+    "properties": {
+        "usageType": { "format": "uri" },
+        "display": {"$ref": "#languagemap"},
+        "description": {"$ref": "#languagemap"},
+        "contentType": {
+            "type": "string",
+            "format": "mimetype"
+        },
+        "length": {
+            "type": "number",
+            "minimum": 0
+        },
+        "sha2": {
+            "type": "string",
+            "format": "sha2"
+        },
+        "fileUrl": {
+            "type": "string",
+            "format": "uri"
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#activity",
+    "type": "object",
+    "required": ["id"],
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uri"
+        },
+        "objectType": {"enum": ["Activity"]},
+        "definition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": { "$ref": "#languagemap" },
+                "description": { "$ref": "#languagemap" },
+                "type": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "interactionType": {
+                    "enum": [
+                        "true-false",
+                        "choice",
+                        "fill-in",
+                        "long-fill-in",
+                        "matching",
+                        "performance",
+                        "sequencing",
+                        "likert",
+                        "numeric",
+                        "other"
+                    ]
+                },
+                "correctResponsesPattern": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                },
+                "extensions": { "$ref": "#extensions" },
+                "moreInfo": {
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^(choices|scale|source|target|steps)$": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["id"],
+                    "properties": {
+                        "id": { "type": "string" },
+                        "description": { "$ref": "#languagemap" }
+                    }
+                }
+            }
+        }
+    }
+}

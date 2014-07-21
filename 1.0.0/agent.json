@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#agent",
+    "allOf": [{ "$ref": "#inversefunctional" }],
+    "oneOf": [
+        { "$ref": "#mbox" },
+        { "$ref": "#mbox_sha1sum" },
+        { "$ref": "#account" },
+        { "$ref": "#openid" }
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "objectType": {"enum": ["Agent"]},
+        "mbox": {},
+        "mbox_sha1sum": {},
+        "account": {},
+        "openid": {}
+    },
+    "additionalProperties": false
+}

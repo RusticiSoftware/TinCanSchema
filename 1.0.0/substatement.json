@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#substatement",
+    "allOf": [{"$ref": "#statement_base"}],
+    "required": ["objectType"],
+    "additionalProperties": false,
+    "properties": {
+        "objectType": {"enum": ["SubStatement"]},
+        "id": { "type": "null" },
+        "stored": { "type": "null" },
+        "authority": { "type": "null" },
+        "voided": { "type": "null" },
+        "object": {
+            "not": {
+                "properties": {
+                    "objectType": {"enum": ["SubStatement"]}
+                }
+            }
+        },
+        "actor": {},
+        "verb": {},
+        "result": {},
+        "context": {},
+        "timestamp": {},
+        "attachments": {},
+        "version": {}
+    }
+}
