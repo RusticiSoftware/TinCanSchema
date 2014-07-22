@@ -23,3 +23,4 @@ TODO
 Thanks
 ------
 * http://stackoverflow.com/questions/21686539/regular-expression-for-full-iso-8601-date-syntax
+* http://jmrware.com/articles/2009/uri_regexp/URI_regex.html
