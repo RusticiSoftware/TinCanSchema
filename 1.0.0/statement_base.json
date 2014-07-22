@@ -41,6 +41,7 @@
                     "properties": {
                         "member": {
                             "type": "array",
+                            "items": { "$ref": "#agent" },
                             "minItems": 2,
                             "maxItems": 2
                         }

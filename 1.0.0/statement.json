@@ -14,9 +14,9 @@
         "timestamp": {},
         "stored": {},
         "authority": {},
+        "version": {},
         "attachments": {},
-        "voided": {},
-        "version": {}
+        "voided": {}
     },
     "additionalProperties": false
 }
