@@ -27,7 +27,7 @@
         },
         "fileUrl": {
             "type": "string",
-            "format": "uri"
+            "format": "absolute-uri"
         }
     }
 }
