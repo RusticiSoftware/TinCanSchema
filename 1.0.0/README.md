@@ -85,7 +85,6 @@ function validateAs(obj, id) {
 TODO
 ----
 * language map keys -- really funky rules!
-* find out why minItems and maxItems aren't validating
 
 Thanks
 ------
