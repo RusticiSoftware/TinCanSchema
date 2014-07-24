@@ -84,7 +84,7 @@ function validateAs(obj, id) {
 
 TODO
 ----
-* language map keys -- really funky rules!
+Finish 1.0.0 support
 
 Thanks
 ------
