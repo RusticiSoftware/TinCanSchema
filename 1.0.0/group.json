@@ -1,7 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "#group",
-    "allOf": [{ "$ref": "#groupBasics" }],
     "oneOf": [
         { "$ref": "#anonymousgroup" },
         { "$ref": "#identifiedgroup" }
