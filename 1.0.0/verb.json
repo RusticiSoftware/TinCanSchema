@@ -6,7 +6,7 @@
     "properties": {
         "id": {
             "type": "string",
-            "format": "uri"
+            "format": "iri"
         },
         "display": {"$ref": "#languagemap"}
     },
