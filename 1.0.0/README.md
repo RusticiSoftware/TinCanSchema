@@ -85,9 +85,3 @@ function validateAs(obj, id) {
 TODO
 ----
 Finish 1.0.0 support
-
-Thanks
-------
-* http://stackoverflow.com/questions/21686539/regular-expression-for-full-iso-8601-date-syntax
-* http://jmrware.com/articles/2009/uri_regexp/URI_regex.html
-* http://stackoverflow.com/questions/7035825/regular-expression-for-a-language-tag-as-defined-by-bcp47
