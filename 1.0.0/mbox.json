@@ -6,8 +6,7 @@
     "properties": {
         "mbox": {
             "type": "string",
-            "format": "uri",
-            "pattern": "^mailto:[^@]+@[^@]+$"
+            "format": "mailto"
         }
     },
     "patternProperties": {
