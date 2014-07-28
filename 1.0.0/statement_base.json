@@ -20,7 +20,7 @@
         "object": {
             "oneOf": [
                 {"$ref": "#activity"},
-                {"$ref": "#objectagent"},
+                {"$ref": "#object_agent"},
                 {"$ref": "#group"},
                 {"$ref": "#statementref"},
                 {"$ref": "#substatement"}
