@@ -4,13 +4,11 @@
     "type": "object",
     "required": ["objectType"],
     "properties": {
-        "name": {
-            "type": "string"
-        },
+        "name": {"type": "string"},
         "objectType": {"enum": ["Group"]},
         "member": {
             "type": "array",
-            "items": { "$ref": "#agent" }
+            "items": {"$ref": "#agent"}
         }
     }
 }

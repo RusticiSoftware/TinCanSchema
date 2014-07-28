@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "#group",
     "oneOf": [
-        { "$ref": "#anonymousgroup" },
-        { "$ref": "#identifiedgroup" }
+        {"$ref": "#anonymousgroup"},
+        {"$ref": "#identifiedgroup"}
     ]
 }

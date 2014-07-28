@@ -3,12 +3,12 @@ Formats
 
 These regular expressions are to be loaded into the JSON validator and run against any strings that specify one of these formats.
 
-For example, the mbox schema specifies that the `mbox` property be formatted in conformance with the `mailto` regex:
+For example, the mbox schema specifies that the `mbox` property be formatted in conformance with the `mailto-iri` regex:
 ```
 ...
     "mbox": {
         "type": "string",
-        "format": "mailto"
+        "format": "mailto-iri"
     }
 ...
 ```
@@ -83,7 +83,7 @@ text/html; charset=utf-8
 ```
 This consists of an identifier, followed by "=", followed by the (possibly quoted) value.
 
-`mailto`
+`mailto-uri`
 --------
 A URI, consisting of "mailto:" followed by an email address. This was assembled from pieces of [JMRWare's URI regex](http://jmrware.com/articles/2009/uri_regexp/URI_regex.html). I sliced the first and last characters off of his regexes so that I could combine them without worrying about the anchors to the beginning and end of the string. I also disallowed the empty string for the username and host.
 
@@ -108,7 +108,7 @@ var email = new RegExp(
     '$'
 );
 
-var mailto = new RegExp(
+var mailto_uri = new RegExp(
     '^' +
     'mailto:' +
     '(?:' + email.source.slice(1,-1) + ')' +
@@ -117,6 +117,10 @@ var mailto = new RegExp(
 
 console.log(JSON.stringify(mailto.source));
 ```
+
+`mailto-iri`
+------------
+An IRI, consisting of "mailto:" followed by an email address. A handmade frankenstein of mailto-uri and iri.
 
 `iri`
 -----

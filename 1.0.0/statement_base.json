@@ -6,25 +6,28 @@
     "additionalProperties": false,
     "properties": {
         "objectType": {},
-        "id": { "format": "uuid" },
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
         "actor": {
             "oneOf": [
-                { "$ref": "#agent" },
-                { "$ref": "#group" }
+                {"$ref": "#agent"},
+                {"$ref": "#group"}
             ]
         },
-        "verb": { "$ref": "#verb" },
+        "verb": {"$ref": "#verb"},
         "object": {
             "oneOf": [
-                { "$ref": "#activity" },
-                { "$ref": "#objectagent" },
-                { "$ref": "#group" },
-                { "$ref": "#statementref" },
-                { "$ref": "#substatement" }
+                {"$ref": "#activity"},
+                {"$ref": "#objectagent"},
+                {"$ref": "#group"},
+                {"$ref": "#statementref"},
+                {"$ref": "#substatement"}
             ]
         },
-        "result": { "$ref": "#result" },
-        "context": { "$ref": "#context" },
+        "result": {"$ref": "#result"},
+        "context": {"$ref": "#context"},
         "timestamp": {
             "type": "string",
             "format": "iso_date"
@@ -35,13 +38,13 @@
         },
         "authority": {
             "oneOf": [
-                { "$ref": "#agent" },
+                {"$ref": "#agent"},
                 {
-                    "allOf": [{ "$ref": "#anonymousgroup" }],
+                    "allOf": [{"$ref": "#anonymousgroup"}],
                     "properties": {
                         "member": {
                             "type": "array",
-                            "items": { "$ref": "#agent" },
+                            "items": {"$ref": "#agent"},
                             "minItems": 2,
                             "maxItems": 2
                         }
@@ -49,13 +52,11 @@
                 }
             ]
         },
+        "version": {"$ref": "#version"},
         "attachments": {
             "type": "array",
             "items": {"$ref": "#attachment"}
         },
-        "voided": {
-            "type": "boolean"
-        },
-        "version": { "$ref": "#version" }
+        "voided": {"type": "boolean"}
     }
 }

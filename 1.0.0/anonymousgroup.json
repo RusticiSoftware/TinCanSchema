@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "#anonymousgroup",
-    "allOf": [{ "$ref": "#group_base" }],
+    "allOf": [{"$ref": "#group_base"}],
     "required": ["member"],
     "properties": {
         "member": {},

@@ -6,7 +6,7 @@
     "properties": {
         "openid": {
             "type": "string",
-            "format": "uri"
+            "format": "rfc3986-uri"
         }
     },
     "patternProperties": {
