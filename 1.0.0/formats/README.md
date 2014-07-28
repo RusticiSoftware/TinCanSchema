@@ -48,19 +48,26 @@ Notes on the patterns
 
 Quoting the API: "Starting with 1.0.0, xAPI will be versioned according to [Semantic Versioning 1.0.0](http://semver.org/spec/v1.0.0.html)." This standard requires a major version number, a minor version number AND a patch number. Other specifiers may be appended.
 
+`uuid`
+------
+```
+"uuid": "^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$"
+```
+Based on [RFC 4122](http://www.ietf.org/rfc/rfc4122.txt). Used in `statement`, `statementref`, and `context`.
+
 `sha1`
 ------
 ```
 "sha1": "^[0-9a-f]{40}$"
 ```
-40 hex digits.
+40 hex digits. Used for `mbox_sha1sum`.
 
 `sha2`
 ------
 ```
 "sha2": "^[0-9a-f]{56}(?:[0-9a-f]{8}(?:[0-9a-f]{32}){0,2})?$"
 ```
-Allows SHA-224 (permitted, not recommended), SHA-256, SHA-384 and SHA-512.
+Allows SHA-224 (permitted, not recommended), SHA-256, SHA-384 and SHA-512. Used for `attachments`.
 
 SHA-224: Each hex digit is 4 bits, so `224/4 = 56` hex digits are needed.
 
@@ -75,7 +82,9 @@ SHA-512: 128 more bits = 32 more hex digits.
 ```
 "mimetype": "^[-\\w\\+\\.]+/[-\\w\\+\\.]+(?:;\\s*[-\\w\\+\\.]+=(?:(['\"]?)[-\\w\\+\\.]+\\1)|''|\"\")?$"
 ```
-Specifies the data type. After examining http://www.freeformatter.com/mime-types-list.html, I determined that every mimetype has two identifiers, separated by a single slash (/). Each identifier may contain word characters, ".", "+" or "-".
+Specifies the data type. Used in `attachment`.
+
+After examining http://www.freeformatter.com/mime-types-list.html, I determined that every mimetype has two identifiers, separated by a single slash (/). Each identifier may contain word characters, ".", "+" or "-".
 
 Optionally, a parameter may be specified following ";" and whitespace, as in
 ```
@@ -85,7 +94,9 @@ This consists of an identifier, followed by "=", followed by the (possibly quote
 
 `mailto-uri`
 --------
-A URI, consisting of "mailto:" followed by an email address. This was assembled from pieces of [JMRWare's URI regex](http://jmrware.com/articles/2009/uri_regexp/URI_regex.html). I sliced the first and last characters off of his regexes so that I could combine them without worrying about the anchors to the beginning and end of the string. I also disallowed the empty string for the username and host.
+A URI, consisting of "mailto:" followed by an email address. Superseded by `mailto-iri`.
+
+This was assembled from pieces of [JMRWare's URI regex](http://jmrware.com/articles/2009/uri_regexp/URI_regex.html). I sliced the first and last characters off of his regexes so that I could combine them without worrying about the anchors to the beginning and end of the string. I also disallowed the empty string for the username and host.
 
 ```
 var user = new RegExp(
@@ -120,11 +131,13 @@ console.log(JSON.stringify(mailto.source));
 
 `mailto-iri`
 ------------
-An IRI, consisting of "mailto:" followed by an email address. A handmade frankenstein of mailto-uri and iri.
+An IRI, consisting of "mailto:" followed by an email address. May contain international characters. A handmade frankenstein of `mailto-uri` and `iri`.
 
 `iri`
 -----
-Like a URI, but allows international characters. Requires a scheme, e.g. "http:" at the beginning. Official definition is in [RFC 3987](http://www.ietf.org/rfc/rfc3987.txt). Modified from [Artefaria's IRI Reference regex](http://www.artefarita.com/journel/post/2013/05/23/An-IRI-pattern-for-Java).
+Like a URI, but allows international characters. Requires a scheme, e.g. "http:" at the beginning. Official definition is in [RFC 3987](http://www.ietf.org/rfc/rfc3987.txt). Used in `verb`.
+
+Modified from [Artefaria's IRI Reference regex](http://www.artefarita.com/journel/post/2013/05/23/An-IRI-pattern-for-Java).
 
 `iri-reference`
 ---------------
@@ -132,7 +145,9 @@ Like a URI Reference, but allows international characters. May be an IRI, or a r
 
 `rfc3986-uri`
 -----
-A URI, which contains only ASCII. Requires a scheme, e.g. "http:" at the beginning. Official definition is in [RFC 3986](http://www.ietf.org/rfc/rfc3986.txt). Taken from [JMRWare's URI regex](http://jmrware.com/articles/2009/uri_regexp/URI_regex.html).
+A URI, which contains only ASCII. Requires a scheme, e.g. "http:" at the beginning. Official definition is in [RFC 3986](http://www.ietf.org/rfc/rfc3986.txt). Used in `openid`.
+
+Taken from [JMRWare's URI regex](http://jmrware.com/articles/2009/uri_regexp/URI_regex.html).
 
 I wanted to put this in `uri`, but this conflicts with [json-schema.org's idea](http://json-schema.org/latest/json-schema-core.html#rfc.section.7.2.3) of what a `uri` is, since they also allow things like "#/definitions/positiveInteger" and "schema1" as URIs, which by the RFC are invalid. Hence, their [metaschema](http://json-schema.org/schema) has a bug at line 32:
 ```
@@ -151,11 +166,15 @@ A URI Reference, which may be a URI, or a resolvable URI fragment. Taken from [J
 
 `iso_date`
 ----------
-A date and time recorded in ISO 8601 format. Taken from http://stackoverflow.com/questions/21686539/regular-expression-for-full-iso-8601-date-syntax.
+A date and time recorded in ISO 8601 format. Used in `statement_base`.
+
+Taken from http://stackoverflow.com/questions/21686539/regular-expression-for-full-iso-8601-date-syntax.
 
 `iso_duration`
 --------------
-A time duration recorded in ISO 8601 format. Also taken from http://stackoverflow.com/questions/21686539/regular-expression-for-full-iso-8601-date-syntax.
+A time duration recorded in ISO 8601 format. Used in `result`.
+
+Also taken from http://stackoverflow.com/questions/21686539/regular-expression-for-full-iso-8601-date-syntax.
 
 
 Thanks
