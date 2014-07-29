@@ -10,7 +10,6 @@
         "stored": {"type": "null"},
         "version": {"type": "null"},
         "authority": {"type": "null"},
-        "voided": {"type": "null"},
         "object": {
             "not": {
                 "required": ["objectType"],

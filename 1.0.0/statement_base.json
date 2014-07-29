@@ -68,7 +68,6 @@
         "attachments": {
             "type": "array",
             "items": {"$ref": "#attachment"}
-        },
-        "voided": {"type": "boolean"}
+        }
     }
 }
