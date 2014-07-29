@@ -10,7 +10,10 @@
         "sha2"
     ],
     "properties": {
-        "usageType": { "format": "uri" },
+        "usageType": {
+            "type": "string",
+            "format": "uri"
+        },
         "display": {"$ref": "#languagemap"},
         "description": {"$ref": "#languagemap"},
         "contentType": {

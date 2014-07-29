@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#interactionactivity_none",
+    "type": "object",
+    "required": ["interactionType"],
+    "properties": {
+        "choices": {"type": "null"},
+        "scale": {"type": "null"},
+        "source": {"type": "null"},
+        "target": {"type": "null"},
+        "steps": {"type": "null"},
+        "interactionType": {
+            "enum": [
+                "true-false",
+                "fill-in",
+                "numeric",
+                "other"
+            ]
+        }
+    }
+}

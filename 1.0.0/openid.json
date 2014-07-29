@@ -8,10 +8,5 @@
             "type": "string",
             "format": "rfc3986-uri"
         }
-    },
-    "patternProperties": {
-        "^(mbox_sha1sum|account|mbox)$": {
-            "type": "null"
-        }
     }
 }

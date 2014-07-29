@@ -18,10 +18,5 @@
                 "name": {"type": "string"}
             }
         }
-    },
-    "patternProperties": {
-        "^(mbox_sha1sum|mbox|openid)$": {
-            "type": "null"
-        }
     }
 }

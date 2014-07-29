@@ -8,10 +8,5 @@
             "type": "string",
             "format": "mailto-iri"
         }
-    },
-    "patternProperties": {
-        "^(mbox_sha1sum|account|openid)$": {
-            "type": "null"
-        }
     }
 }

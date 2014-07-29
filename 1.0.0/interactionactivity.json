@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#interactionactivity",
+    "type": "object",
+    "oneOf": [
+        {"$ref": "#interactionactivity_choices"},
+        {"$ref": "#interactionactivity_scale"},
+        {"$ref": "#interactionactivity_sourcetarget"},
+        {"$ref": "#interactionactivity_steps"},
+        {"$ref": "#interactionactivity_none"}
+    ],
+    "properties": {
+        "correctResponsesPattern": {
+            "type": "array",
+            "items": {"type": "string"}
+        }
+    }
+}

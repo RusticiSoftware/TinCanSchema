@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#interactionactivity_choices",
+    "type": "object",
+    "required": ["choices", "interactionType"],
+    "properties": {
+        "choices": {"$ref": "#interactioncomponent_list"},
+        "scale": {"type": "null"},
+        "source": {"type": "null"},
+        "target": {"type": "null"},
+        "steps": {"type": "null"},
+        "interactionType": {
+            "enum": [
+                "choice",
+                "sequencing"
+            ]
+        }
+    }
+}

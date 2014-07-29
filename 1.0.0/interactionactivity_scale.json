@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#interactionactivity_scale",
+    "type": "object",
+    "required": ["scale", "interactionType"],
+    "properties": {
+        "choices": {"type": "null"},
+        "scale": {"$ref": "#interactioncomponent_list"},
+        "source": {"type": "null"},
+        "target": {"type": "null"},
+        "steps": {"type": "null"},
+        "interactionType": {"enum": ["likert"]}
+    }
+}

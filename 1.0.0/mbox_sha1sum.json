@@ -8,10 +8,5 @@
             "type": "string",
             "format": "sha1"
         }
-    },
-    "patternProperties": {
-        "^(mbox|account|openid)$": {
-            "type": "null"
-        }
     }
 }

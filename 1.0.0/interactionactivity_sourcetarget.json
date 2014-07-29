@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#interactionactivity_sourcetarget",
+    "type": "object",
+    "required": ["source", "target", "interactionType"],
+    "properties": {
+        "choices": {"type": "null"},
+        "scale": {"type": "null"},
+        "source": {"$ref": "#interactioncomponent_list"},
+        "target": {"$ref": "#interactioncomponent_list"},
+        "steps": {"type": "null"},
+        "interactionType": {"enum": ["matching"]}
+    }
+}

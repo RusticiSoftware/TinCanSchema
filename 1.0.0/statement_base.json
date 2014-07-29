@@ -17,15 +17,7 @@
             ]
         },
         "verb": {"$ref": "#verb"},
-        "object": {
-            "oneOf": [
-                {"$ref": "#activity"},
-                {"$ref": "#object_agent"},
-                {"$ref": "#group"},
-                {"$ref": "#statementref"},
-                {"$ref": "#substatement"}
-            ]
-        },
+        "object": {"$ref": "#statement_object"},
         "result": {"$ref": "#result"},
         "context": {"$ref": "#context"},
         "timestamp": {

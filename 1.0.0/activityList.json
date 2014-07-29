@@ -4,8 +4,8 @@
     "oneOf": [
         {
             "type": "array",
-            "items": { "$ref": "#activity" }
+            "items": {"$ref": "#activity"}
         },
-        { "$ref": "#activity" }
+        {"$ref": "#activity"}
     ]
 }

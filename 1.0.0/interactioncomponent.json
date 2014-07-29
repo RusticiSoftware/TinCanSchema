@@ -1,15 +1,13 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "#activity",
+    "id": "#interactioncomponent",
     "type": "object",
     "required": ["id"],
-    "additionalProperties": false,
     "properties": {
         "id": {
             "type": "string",
-            "format": "uri"
+            "minLength": 1
         },
-        "objectType": {"enum": ["Activity"]},
-        "definition": {"$ref": "#activity_definition"}
+        "description": {"$ref": "#languagemap"}
     }
 }

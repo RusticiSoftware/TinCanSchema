@@ -4,7 +4,10 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "registration": { "format": "uuid" },
+        "registration": {
+            "type": "string",
+            "format": "uuid"
+        },
         "instructor": {
             "oneOf": [
                 { "$ref": "#agent" },
