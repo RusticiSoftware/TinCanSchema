@@ -12,7 +12,7 @@
     "properties": {
         "usageType": {
             "type": "string",
-            "format": "uri"
+            "format": "iri"
         },
         "display": {"$ref": "#languagemap"},
         "description": {"$ref": "#languagemap"},
@@ -30,7 +30,7 @@
         },
         "fileUrl": {
             "type": "string",
-            "format": "uri"
+            "format": "iri"
         }
     }
 }
