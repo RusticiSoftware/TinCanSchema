@@ -3,18 +3,17 @@
     "id": "#result",
     "type": "object",
     "properties": {
-        "score": { "$ref": "#score" },
-        "success": {
-            "type": "boolean"
-        },
-        "completion": {
-            "type": "boolean"
-        },
+        "score": {"$ref": "#score"},
+        "success": {"type": "boolean"},
+        "completion": {"type": "boolean"},
         "response": {
             "type": "string"
         },
-        "duration": { "format": "iso_duration" },
-        "extensions": { "$ref": "#extensions" }
+        "duration": {
+            "type": "string",
+            "format": "iso_duration"
+        },
+        "extensions": {"$ref": "#extensions"}
     },
     "additionalProperties": false
 }
