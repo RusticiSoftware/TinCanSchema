@@ -6,12 +6,14 @@
     "additionalProperties": false,
     "properties": {
         "objectType": {"enum": ["SubStatement"]},
-        "id": { "type": "null" },
-        "stored": { "type": "null" },
-        "authority": { "type": "null" },
-        "voided": { "type": "null" },
+        "id": {"type": "null"},
+        "stored": {"type": "null"},
+        "version": {"type": "null"},
+        "authority": {"type": "null"},
+        "voided": {"type": "null"},
         "object": {
             "not": {
+                "required": ["objectType"],
                 "properties": {
                     "objectType": {"enum": ["SubStatement"]}
                 }
