@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "#activityList",
+    "id": "#activity_list_or_obj",
     "oneOf": [
         {
             "type": "array",

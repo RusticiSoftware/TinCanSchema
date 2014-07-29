@@ -15,29 +15,23 @@
             ]
         },
         "team": {
-            "oneOf": [
-                {"$ref": "#agent"},
-                {"$ref": "#group"}
-            ]
+            "allOf": [{"$ref": "#group"}]
         },
         "contextActivities": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "parent": {"$ref": "#activityList"},
-                "category": {"$ref": "#activityList"},
-                "grouping": {"$ref": "#activityList"},
-                "other": {"$ref": "#activityList"}
+                "parent": {"$ref": "#activity_list_or_obj"},
+                "grouping": {"$ref": "#activity_list_or_obj"},
+                "category": {"$ref": "#activity_list_or_obj"},
+                "other": {"$ref": "#activity_list_or_obj"}
             }
         },
-        "revision": {
-            "type": "string"
-        },
-        "platform": {
-            "type": "string"
-        },
+        "revision": {"type": "string"},
+        "platform": {"type": "string"},
         "language": {
-            "type": "string"
+            "type": "string",
+            "format": "langtag"
         },
         "statement": {"$ref": "#statementref"},
         "extensions": {"$ref": "#extensions"}

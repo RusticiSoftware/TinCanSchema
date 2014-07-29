@@ -3,6 +3,26 @@
     "id": "#statement_base",
     "type": "object",
     "required": ["actor", "verb", "object"],
+    "oneOf": [
+        {
+            "required": ["object"],
+            "properties": {
+                "object": {"$ref": "#activity"}
+            }
+        },
+        {
+            "required": ["object"],
+            "properties": {
+                "object": {"not": {"$ref": "#activity"}},
+                "context": {
+                    "properties": {
+                        "revision": {"type": "null"},
+                        "platform": {"type": "null"}
+                    }
+                }
+            }
+        }
+    ],
     "additionalProperties": false,
     "properties": {
         "objectType": {},
