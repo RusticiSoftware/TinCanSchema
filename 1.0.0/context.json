@@ -10,24 +10,24 @@
         },
         "instructor": {
             "oneOf": [
-                { "$ref": "#agent" },
-                { "$ref": "#group" }
+                {"$ref": "#agent"},
+                {"$ref": "#group"}
             ]
         },
         "team": {
             "oneOf": [
-                { "$ref": "#agent" },
-                { "$ref": "#group" }
+                {"$ref": "#agent"},
+                {"$ref": "#group"}
             ]
         },
         "contextActivities": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "parent": { "$ref": "#activityList" },
-                "category": { "$ref": "#activityList" },
-                "grouping": { "$ref": "#activityList" },
-                "other": { "$ref": "#activityList" }
+                "parent": {"$ref": "#activityList"},
+                "category": {"$ref": "#activityList"},
+                "grouping": {"$ref": "#activityList"},
+                "other": {"$ref": "#activityList"}
             }
         },
         "revision": {
@@ -39,7 +39,7 @@
         "language": {
             "type": "string"
         },
-        "statement": { "$ref": "#statementref" },
-        "extensions": { "$ref": "#extensions" }
+        "statement": {"$ref": "#statementref"},
+        "extensions": {"$ref": "#extensions"}
     }
 }
