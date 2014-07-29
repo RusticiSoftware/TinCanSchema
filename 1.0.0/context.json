@@ -17,16 +17,7 @@
         "team": {
             "allOf": [{"$ref": "#group"}]
         },
-        "contextActivities": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "parent": {"$ref": "#activity_list_or_obj"},
-                "grouping": {"$ref": "#activity_list_or_obj"},
-                "category": {"$ref": "#activity_list_or_obj"},
-                "other": {"$ref": "#activity_list_or_obj"}
-            }
-        },
+        "contextActivities": {"$ref": "#contextactivities"},
         "revision": {"type": "string"},
         "platform": {"type": "string"},
         "language": {

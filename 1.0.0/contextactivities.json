@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#contextactivities",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "parent": {"$ref": "#activity_list_or_obj"},
+        "grouping": {"$ref": "#activity_list_or_obj"},
+        "category": {"$ref": "#activity_list_or_obj"},
+        "other": {"$ref": "#activity_list_or_obj"}
+    }
+}
