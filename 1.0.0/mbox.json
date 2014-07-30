@@ -8,6 +8,9 @@
             "id": "#mbox!core",
             "type": "string",
             "format": "mailto-iri"
-        }
+        },
+        "mbox_sha1sum": {"type": "null"},
+        "openid": {"type": "null"},
+        "account": {"type": "null"}
     }
 }

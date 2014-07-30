@@ -8,6 +8,9 @@
             "id": "#mbox_sha1sum!core",
             "type": "string",
             "format": "sha1"
-        }
+        },
+        "mbox": {"type": "null"},
+        "openid": {"type": "null"},
+        "account": {"type": "null"}
     }
 }

@@ -7,6 +7,7 @@
         "account": {
             "id": "#account!core",
             "type": "object",
+            "additionalProperties": false,
             "required": [
                 "homePage",
                 "name"
@@ -18,6 +19,9 @@
                 },
                 "name": {"type": "string"}
             }
-        }
+        },
+        "mbox": {"type": "null"},
+        "mbox_sha1sum": {"type": "null"},
+        "openid": {"type": "null"}
     }
 }
