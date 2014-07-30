@@ -5,6 +5,7 @@
     "required": ["mbox_sha1sum"],
     "properties": {
         "mbox_sha1sum": {
+            "id": "#mbox_sha1sum!core",
             "type": "string",
             "format": "sha1"
         }

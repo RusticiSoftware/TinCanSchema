@@ -5,6 +5,7 @@
     "required": ["mbox"],
     "properties": {
         "mbox": {
+            "id": "#mbox!core",
             "type": "string",
             "format": "mailto-iri"
         }

@@ -5,6 +5,7 @@
     "required": ["openid"],
     "properties": {
         "openid": {
+            "id": "#openid!core",
             "type": "string",
             "format": "rfc3986-uri"
         }

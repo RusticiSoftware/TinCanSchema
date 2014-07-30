@@ -5,6 +5,7 @@
     "required": ["account"],
     "properties": {
         "account": {
+            "id": "#account!core",
             "type": "object",
             "required": [
                 "homePage",

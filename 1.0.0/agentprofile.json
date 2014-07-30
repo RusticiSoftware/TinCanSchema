@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#agentprofile",
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["objectType"],
+    "properties": {
+        "objectType": {"enum": ["Person"]},
+        "name": {
+            "type": "array",
+            "items": {"type": "string"}
+        },
+        "mbox": {
+            "type": "array",
+            "items": {"$ref": "#mbox!core"}
+        },
+        "mbox_sha1sum": {
+            "type": "array",
+            "items": {"$ref": "#mbox_sha1sum!core"}
+        },
+        "openid": {
+            "type": "array",
+            "items": {"$ref": "#openid!core"}
+        },
+        "account": {
+            "type": "array",
+            "items": {"$ref": "#account!core"}
+        }
+    }
+}
