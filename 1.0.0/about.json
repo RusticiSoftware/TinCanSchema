@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#about",
+    "type": "object",
+    "required": ["version"],
+    "additionalProperties": false,
+    "properties": {
+        "version": {
+            "type": "string",
+            "format": "version"
+        },
+        "extensions": {"$ref": "#extensions"}
+    }
+}
