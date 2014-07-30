@@ -5,11 +5,8 @@
     "required": ["id"],
     "additionalProperties": false,
     "properties": {
-        "id": {
-            "type": "string",
-            "format": "uri"
-        },
         "objectType": {"enum": ["Activity"]},
+        "id": {"$ref": "#activity_id"},
         "definition": {"$ref": "#activity_definition"}
     }
 }
