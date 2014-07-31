@@ -108,7 +108,7 @@ The JSON files on the root level of this directory were designed to be joined to
 
 3. Register the schema with your validator:
 
-        YourValidator.addSchema("tcapi:1.0.0", result);
+        YourValidator.addSchema("tcapi:1.0.1", result);
 
 4. Now to register the formats. Load and validate formats/formats.json:
 
@@ -131,6 +131,6 @@ The JSON files on the root level of this directory were designed to be joined to
 6. Now you can validate stuff!
 
         function validateAs(obj, id) {
-            schema = { "$ref": "tcapi:1.0.0#" + id };
+            schema = { "$ref": "tcapi:1.0.1#" + id };
             YourValidator.validate(obj, schema);
         }
