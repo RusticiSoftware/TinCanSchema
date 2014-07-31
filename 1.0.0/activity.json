@@ -6,7 +6,7 @@
     "additionalProperties": false,
     "properties": {
         "objectType": {"enum": ["Activity"]},
-        "id": {"$ref": "#activity_id"},
+        "id": {"$ref": "#activityid!core"},
         "definition": {"$ref": "#activity_definition"}
     }
 }
