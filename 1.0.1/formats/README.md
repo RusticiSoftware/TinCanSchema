@@ -19,20 +19,17 @@ Extending
 ---------
 If a new format must be added, a new entry must be added to formats.json. This is slightly difficult, because proper escaping must be applied to produce a valid JSON representation of the regex. Here is a suggested technique, using node.js:
 
-1. Create the RegExp object:
+    // 1. Create the RegExp object:
+    var any_three = /^...$/;
 
-        var any_three = /^...$/;
+    // 2. Make and print the JSON string:
+    console.log(JSON.stringify(any_three.source));
 
-2. Make and print the JSON string:
-
-        console.log(JSON.stringify(any_three.source));
-
-3. You can then copy-paste the output into formats.json:
-
-        ...
-            "sha1": "^[0-9a-f]{40}$",
-            "any_three": "^...$",
-        ...
+    // 3. You can then copy-paste the output into formats.json:
+    //    ...
+    //        "sha1": "^[0-9a-f]{40}$",
+    //        "any_three": "^...$",
+    //    ...
 
 Notes on the patterns
 ---------------------
