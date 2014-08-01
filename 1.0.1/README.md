@@ -71,7 +71,6 @@ The JSON files on the root level of this directory were designed to be joined to
             "properties": {}
         }
 
-
 2. For each JSON file:
 
     a. Parse it to an object and verify that it is valid JSON
@@ -105,7 +104,6 @@ The JSON files on the root level of this directory were designed to be joined to
         id = data["id"];
         result["properties"][id] = data;
 
-
 3. Register the schema with your validator:
 
         YourValidator.addSchema("tcapi:1.0.1", result);
@@ -119,14 +117,12 @@ The JSON files on the root level of this directory were designed to be joined to
             // handle the error
         }
 
-
 5. For each item in the data, make the Regex and register it with your validator:
 
         for (item in data.keys()) {
             rgx = new Regex(data[item]);
             YourValidator.addFormat(item, rgx);
         }
-
 
 6. Now you can validate stuff!
 
