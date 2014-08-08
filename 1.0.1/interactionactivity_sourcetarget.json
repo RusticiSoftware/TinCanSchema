@@ -2,6 +2,7 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "#interactionactivity_sourcetarget",
     "type": "object",
+    "allOf": [{"$ref": "#interactionactivity_base"}],
     "required": ["source", "target", "interactionType"],
     "properties": {
         "choices": {"type": "null"},

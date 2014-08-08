@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "#interactionactivity_base",
+    "type": "object",
+    "properties": {
+        "correctResponsesPattern": {
+            "type": "array",
+            "items": {"type": "string"}
+        }
+    }
+}

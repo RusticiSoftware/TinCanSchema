@@ -8,11 +8,5 @@
         {"$ref": "#interactionactivity_sourcetarget"},
         {"$ref": "#interactionactivity_steps"},
         {"$ref": "#interactionactivity_none"}
-    ],
-    "properties": {
-        "correctResponsesPattern": {
-            "type": "array",
-            "items": {"type": "string"}
-        }
-    }
+    ]
 }
