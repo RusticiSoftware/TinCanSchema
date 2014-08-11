@@ -2,8 +2,22 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "#interactionactivity_none",
     "type": "object",
-    "allOf": [{"$ref": "#interactionactivity_base"}],
     "required": ["interactionType"],
+    "allOf": [
+        {"$ref": "#interactionactivity_base"},
+        {"oneOf": [
+            {"properties": {
+                "interactionType": {"enum": ["true-false"]},
+                "correctResponsesPattern": {
+                    "type": "array",
+                    "items": {"enum": ["true", "false"]}
+                }
+            }},
+            {"not": {"properties": {
+                "interactionType": {"enum": ["true-false"]}
+            }}}
+        ]}
+    ],
     "properties": {
         "choices": {"type": "null"},
         "scale": {"type": "null"},
