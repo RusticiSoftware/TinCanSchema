@@ -3,6 +3,59 @@ Tin Can Schema
 
 An in-progress JSON schema for the [xAPI 1.0.1](https://github.com/adlnet/xAPI-Spec/blob/master/xAPI.md) (TinCan) standard. It is being tested using https://github.com/chaimleib-scorm/TinCanValidator.
 
+Structure
+---------
+Many of the files here are not complete objects, but are used as overlaid rules on other objects. The non-overlay objects are
+
+* about
+* account!core
+* activity
+* activity_definition
+* activityid!core
+* activity_list_or_obj
+* agent
+* anonymousgroup
+* attachment
+* context
+* contextactivities
+* extensions
+* group
+* identifiedgroup
+* interactioncomponent
+* interactioncomponent_list
+* languagemap
+* mbox!core
+* mbox_sha1sum!core
+* openid!core
+* person
+* result
+* score
+* statement
+* statement_object
+* statement_ref
+* statementresult
+* substatement
+* verb
+
+The overlay objects are listed here. If they contain non-overlay objects, these are listed in parenthesis.
+
+* account (account!core)
+* activity_definition
+* activityid (activityid!core)
+* group_base
+* interactionactivity
+* interactionactivity_base
+* interactionactivity_choices
+* interactionactivity_none
+* interactionactivity_scale
+* interactionactivity_sourcetarget
+* interactionactivity_steps
+* inversefunctional
+* mbox (mbox!core)
+* mbox_sha1sum (mbox_sha1sum!core)
+* openid (openid!core)
+* statement_base
+
 Naming conventions
 ------------------
 
@@ -123,3 +176,7 @@ The JSON files on the root level of this directory were designed to be joined to
         schema = { "$ref": "tcapi:1.0.1#" + id };
         YourValidator.validate(obj, schema);
     }
+
+TODO
+----
+* Verification of SCORM data model elements (SCORM 2004:4.1.1) in interaction activities' `correctResponsePattern`s, eg. `1[.]a[,]2[.]c[,]3[.]b`, `{lang=de}Hallo, Welt!`
