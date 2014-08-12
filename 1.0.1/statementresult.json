@@ -2,6 +2,7 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "#statementresult",
     "type": "object",
+    "additionalProperties": false,
     "required": ["statements"],
     "properties": {
         "statements": {
