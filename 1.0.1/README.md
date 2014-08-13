@@ -7,7 +7,7 @@ Structure
 ---------
 Many of the files here are not complete objects, but are used as overlaid rules on other objects. The non-overlay objects are
 
-* about
+* **about**
 * account!core
 * activity
 * activity_definition
@@ -18,19 +18,19 @@ Many of the files here are not complete objects, but are used as overlaid rules 
 * attachment
 * context
 * contextactivities
-* extensions
+* **extensions**
 * group
 * identifiedgroup
 * interactioncomponent
 * interactioncomponent_list
-* languagemap
+* **languagemap**
 * mbox!core
 * mbox_sha1sum!core
 * openid!core
-* person
+* **person** (AKA Agent Profile)
 * result
 * score
-* statement
+* **statement**
 * statement_object
 * statement_ref
 * statementresult
