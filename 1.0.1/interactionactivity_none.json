@@ -28,6 +28,7 @@
             "enum": [
                 "true-false",
                 "fill-in",
+                "long-fill-in",
                 "numeric",
                 "other"
             ]

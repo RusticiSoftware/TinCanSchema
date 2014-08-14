@@ -1,6 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "#extensions",
-    "patternProperties": { "^[a-zA-Z][a-zA-Z+.-]*:": {} },
-    "additionalProperties": false
-}

@@ -1,9 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "#objectagent",
-    "allOf": [{ "$ref": "#agent" }],
-    "required": ["objectType"],
-    "properties": {
-        "objectType": {}
-    }
-}
