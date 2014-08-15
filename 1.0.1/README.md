@@ -1,60 +1,70 @@
 Tin Can Schema
 ==========================
 
-An in-progress JSON schema for the [xAPI 1.0.1](https://github.com/adlnet/xAPI-Spec/blob/master/xAPI.md) (TinCan) standard. It is being tested using https://github.com/chaimleib-scorm/TinCanValidator.
+An in-progress JSON schema for the
+[xAPI 1.0.1](https://github.com/adlnet/xAPI-Spec/blob/master/xAPI.md)
+(Tin Can API) standard. It is being tested using
+https://github.com/RusticiSoftware/TinCanValidator.
 
 Structure
 ---------
-Many of the files here are not complete objects, but are used as overlaid rules on other objects. The non-overlay objects are
+Many of the files here are not complete objects, but are used as overlaid rules
+on other objects. Such overlay objects are generally not useful to test against.
 
-* **about**
-* account!core
-* activity
-* activity_definition
-* activityid!core
-* activity_list_or_obj
-* agent
-* anonymousgroup
-* attachment
-* context
-* contextactivities
-* **extensions**
-* group
-* identifiedgroup
-* interactioncomponent
-* interactioncomponent_list
-* **languagemap**
-* mbox!core
-* mbox_sha1sum!core
-* openid!core
-* **person** (AKA Agent Profile)
-* result
-* score
-* **statement**
-* statement_object
-* statement_ref
-* statementresult
-* substatement
-* verb
+The non-overlay objects are
+
+* `about`*
+* `account!core`
+* `activity`
+* `activity_definition`
+* `activityid!core`**
+* `activity_list_or_obj`
+* `agent`
+* `anonymousgroup`
+* `attachment`
+* `context`
+* `contextactivities`
+* `extensions`*
+* `group`
+* `identifiedgroup`
+* `interactioncomponent`
+* `interactioncomponent_list`
+* `languagemap`*
+* `mbox!core`**
+* `mbox_sha1sum!core`**
+* `openid!core`**
+* `person`* (AKA Agent Profile)
+* `result`
+* `score`
+* `statement`*
+* `statement_object`
+* `statement_ref`
+* `statementresult`
+* `substatement`
+* `verb`
+
+\* Probably important
+<br/>
+\*\* Formatted string, not an object
 
 The overlay objects are listed here. If they contain non-overlay objects, these are listed in parenthesis.
 
-* account (account!core)
-* activity_definition
-* activityid (activityid!core)
-* group_base
-* interactionactivity
-* interactionactivity_base
-* interactionactivity_choices
-* interactionactivity_none
-* interactionactivity_scale
-* interactionactivity_sourcetarget
-* interactionactivity_steps
-* inversefunctional
-* mbox (mbox!core)
-* mbox_sha1sum (mbox_sha1sum!core)
-* openid (openid!core)
-* statement_base
+* `account` (`account!core`)
+* `activity_definition`
+* `activityid` (`activityid!core`)
+* `group_base`
+* `interactionactivity`
+* `interactionactivity_base`
+* `interactionactivity_choices`
+* `interactionactivity_none`
+* `interactionactivity_scale`
+* `interactionactivity_sourcetarget`
+* `interactionactivity_steps`
+* `inversefunctional`
+* `mbox` (`mbox!core`)
+* `mbox_sha1sum` (`mbox_sha1sum!core`)
+* `openid` (`openid!core`)
+* `statement_base`
 
 Naming conventions
 ------------------
