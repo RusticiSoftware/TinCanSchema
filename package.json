@@ -1,0 +1,42 @@
+{
+  "name": "tin-can-json-schema",
+  "version": "1.0.0",
+  "description": "JSON Schema files for structures in the Experience API",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RusticiSoftware/TinCanSchema.git"
+  },
+  "keywords": [
+    "tincan",
+    "tin can",
+    "e-learning",
+    "scorm",
+    "lrs",
+    "experienceapi",
+    "experience api",
+    "xapi"
+  ],
+  "author": "Rustici Software <support@tincanapi.com>",
+  "contributors": [
+    {
+      "name": "Chaim-Leib Halbert",
+      "email": "chaim.leib.halbert@gmail.com"
+    },
+    {
+      "name": "Brian J. Miller",
+      "email": "brian.miller@tincanapi.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RusticiSoftware/TinCanSchema/issues"
+  },
+  "homepage": "https://github.com/RusticiSoftware/TinCanSchema",
+  "devDependencies": {
+    "glob": "^4.4.0"
+  },
+  "scripts": {
+    "prepublish": "node npm/prepublish.js"
+  }
+}
