@@ -1,6 +1,6 @@
 {
   "name": "tin-can-json-schema",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "JSON Schema files for structures in the Experience API",
   "private": false,
   "repository": {
@@ -17,7 +17,7 @@
     "experience api",
     "xapi"
   ],
-  "author": "Rustici Software <support@tincanapi.com>",
+  "author": "Rustici Software <support@rusticisoftware.com>",
   "contributors": [
     {
       "name": "Chaim-Leib Halbert",
@@ -25,7 +25,11 @@
     },
     {
       "name": "Brian J. Miller",
-      "email": "brian.miller@tincanapi.com"
+      "email": "brian.miller@rusticisoftware.com"
+    },
+    {
+      "name": "Chris Hooks",
+      "email": "chris.hooks@rusticisoftware.com"
     }
   ],
   "license": "Apache-2.0",
