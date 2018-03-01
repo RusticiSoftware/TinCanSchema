@@ -5,10 +5,7 @@
     "additionalProperties": false,
     "required": ["statements"],
     "properties": {
-        "statements": {
-            "type": "array",
-            "items": {"$ref": "#statement"}
-        },
+        "statements": {"$ref": "#statement_list"},
         "more": {
             "type": "string",
             "format": "iri"
