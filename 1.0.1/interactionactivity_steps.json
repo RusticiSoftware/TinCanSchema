@@ -3,7 +3,7 @@
     "id": "#interactionactivity_steps",
     "type": "object",
     "allOf": [{"$ref": "#interactionactivity_base"}],
-    "required": ["steps", "interactionType"],
+    "required": ["interactionType"],
     "properties": {
         "choices": {"type": "null"},
         "scale": {"type": "null"},

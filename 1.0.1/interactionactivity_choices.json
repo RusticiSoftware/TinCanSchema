@@ -3,7 +3,7 @@
     "id": "#interactionactivity_choices",
     "type": "object",
     "allOf": [{"$ref": "#interactionactivity_base"}],
-    "required": ["choices", "interactionType"],
+    "required": ["interactionType"],
     "properties": {
         "choices": {"$ref": "#interactioncomponent_list"},
         "scale": {"type": "null"},

@@ -3,7 +3,7 @@
     "id": "#interactionactivity_sourcetarget",
     "type": "object",
     "allOf": [{"$ref": "#interactionactivity_base"}],
-    "required": ["source", "target", "interactionType"],
+    "required": ["interactionType"],
     "properties": {
         "choices": {"type": "null"},
         "scale": {"type": "null"},

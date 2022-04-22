@@ -3,5 +3,5 @@
     "id": "#interactioncomponent_list",
     "type": "array",
     "items": {"$ref": "#interactioncomponent"},
-    "minItems": 1
+    "minItems": 0
 }
