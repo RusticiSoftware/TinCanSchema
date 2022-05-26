@@ -64,7 +64,10 @@
                 }
             ]
         },
-        "version": {"$ref": "#version"},
+        "version": {
+            "type": "string",
+            "format": "version"
+        },
         "attachments": {
             "type": "array",
             "items": {"$ref": "#attachment"}
